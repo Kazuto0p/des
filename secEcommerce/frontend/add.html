@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+
+<body>
+    <div id="add">
+        <form onsubmit="sendBack(event)">
+            <label for="name">Enter the Mobile Name :</label>
+            <input type="text" id="name" name="name"> <br>
+            <label for="brand">Mobile Brand :</label>
+            <input type="text" id="brand" name="brand"><br>
+            <label for="ram">Device RAM :</label>
+            <input type="text" id="ram" name="ram"><br>
+            <label for="rom">Device ROM :</label>
+            <input type="text" id="rom" name="rom"><br>
+            <label for="price">Price :</label>
+            <input type="text" id="price" name="price"><br>
+            <label for="color">Color :</label>
+            <input type="text" id="color" name="color"><br>
+            <label for="qty">Quantity :</label>
+            <input type="text" id="qty" name="qty"><br>
+            <label for="image">image :</label>
+            <input type="file" id="image" name="image" multiple><br>
+            <button style="padding: 6px; color: white; background-color: rgb(19, 192, 19);">Submit</button>
+        </form>
+        <div class="preview" id="preview"></div>
+    </div>
+<script src="js/add.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+
+nav{
+    margin-top: 0.5%;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+.navbar2{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+hr{
+    height: 0px;
+    width: 100%;
+    color: grey;
+}
