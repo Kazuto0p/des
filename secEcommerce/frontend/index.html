@@ -9,32 +9,84 @@
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Set the size of the slider */
+        .swiper {
+          width: 100%;
+          max-width: 600px; /* Adjust max width as you want */
+          height: 300px; /* Adjust height as you want */
+          margin-top: 40px;
+          /* margin: auto;Center the slider */
+          border-radius: 10px; /* Optional: Rounded corners */
+          overflow: hidden; /* Hide overflow if images are bigger */
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Soft shadow */
+        }
+      
+        /* Make sure images fit inside the slider */
+        .swiper-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* Cover the box nicely without stretching */
+        }
+      </style>
+      
 
 </head>
 
 <body>
     <div class="m1" style="background-color: peachpuff;  width: 100%; height: 100%; padding: 3px;">
         <nav>
-            <div id="navbar" style="padding: 10px;">
-                <div class="n1">
-                    <h4 style="color: aliceblue;">Mobile Shop</h4>
+            <div id="navbar">
+              <div class="n1">
+                <h1>Mobile Shop</h1>
+              </div>
+              <div class="navbar2">
+                <div class="search">
+                  <input type="text" id="searchb" placeholder="Search products...">
                 </div>
+                <div id="cart">
+                  <a href="#"><button><i class="fas fa-shopping-cart"></i> Cart</button></a>
+                </div>
+                <div id="Login">
+                  <button>Login</button>
+                </div>
+                <div id="sig">
+                  <button style="width: 122px;">Sign Up</button>
+                </div>
+                <div id="add">
+                  <a href="add.html"><button style="width: 122px;">Add Products</button></a>
+                </div>
+              </div>
             </div>
-            <div class="navbar2">
-                <div class="search"><input type="text" id="searchb"></div>
-                <div id="cart"><a href="#"><button style=" background-color: #eb2546"><i class="fas fa-shopping-cart"></i> Cart</button></a></div>
-                <div id="Login"><button style=" background-color: #eb2546">Login</button></div>
-                <div id="sig"><button style=" background-color: #eb2546">SignUp</button></div>
-                <div id="add"><a href="add.html" style="text-decoration: none;"><button style=" background-color: #eb2546">Add Products</button></a></div>
-                
+          </nav>
+          
+                    
+
+        <!-- Slider main container -->
+        <div class="swiper" style="background-color: aliceblue;">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" >
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/71bQeLHQF-L._AC_UY218_.jpg" alt="Offer 1"></div>
+                <div class="swiper-slide"><img src="images/iq000.jpg" alt="Offer 2"></div>
+                <div class="swiper-slide"><img src="images/shopping.webp" alt="Offer 3"></div>
+                <!-- Add more slides easily by copying above line -->
             </div>
-        </nav>
+
+            <!-- If you want Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If you want Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
 
 
         <div id="cont">
             <div class="card">
                 <div class="m2">
-                   
+
                     <img src="images/shopping.webp" alt="no preview" srcset="" class="images">
                     <hr>
                 </div>
@@ -42,34 +94,43 @@
                 <div class="bt">
                     <label for=""> Name</label> <br>
                     <label for="">Price</label><br>
-                    <a href="view.html" style="text-decoration: none;"><button id="btn" style="width: auto;">View Details</button></a>
+                    <a href="view.html" style="text-decoration: none;"><button id="btn" style="width: auto;">View
+                            Details</button></a>
                 </div>
             </div>
 
 
-            
 
-            
 
-            
-            
-            
+
+
+
+
+
 
         </div>
     </div>
 
     <script src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script>
-      const swiper = new Swiper('.swiper', {
-        loop: true,
-        autoplay: {
-          delay: 3000,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
+        const swiper = new Swiper('.swiper', {
+            loop: true, // Infinite loop
+            autoplay: {
+                delay: 3000, // 3 seconds auto-slide
+                disableOnInteraction: false, // Keeps autoplay even if user interacts
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
 
 </body>
