@@ -1,23 +1,74 @@
-*{
+* {
     margin: 0;
-}
-
-nav{
-    margin-top: 0.5%;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif; /* clean modern font */
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-}
-.navbar2{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-}
-hr{
-    height: 0px;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #111; /* Dark background */
+    color: #fff;
+  }
+  
+  #navbar {
     width: 100%;
-    color: grey;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .n1 h1 {
+    font-size: 24px;
+    color: #eb2546; /* Highlight brand name */
+    letter-spacing: 1px;
+  }
+  
+  .navbar2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eb2546;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #c41f3a; /* slightly darker on hover */
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  hr {
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+    border: none;
+    margin-top: 10px;
+  }
+  
